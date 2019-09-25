@@ -20,19 +20,19 @@ class log_reg:
         os = SMOTE(random_state=0)
         columns = self.x_train.columns
         os_data_X, os_data_y = os.fit_sample(self.x_train, self.y_train)
-        os_data_X = pd.DataFrame(data=os_data_X, columns=columns)
-        os_data_y = pd.DataFrame(data=os_data_y, columns=['y'])
+        self.os_data_X = pd.DataFrame(data=os_data_X, columns=columns)
+        self.os_data_y = pd.DataFrame(data=os_data_y, columns=['y'])
 
         # check the numbers of our data
-        print("length of oversampled data is ", len(os_data_X))
-        print("Number of", type1, "in oversampled data", len(os_data_y[os_data_y['y'] == type1]))
-        print("Number of", type2, len(os_data_y[os_data_y['y'] == type2 ]))
-        print("Proportion of", type1, "data in oversampled data is ", len(os_data_y[os_data_y['y'] == type1 ]) / len(os_data_X))
-        print("Proportion of", type2, "data in oversampled data is ", len(os_data_y[os_data_y['y'] == type2 ]) / len(os_data_X))
+        print("length of oversampled data is ", len(self.os_data_X))
+        print("Number of", type1, "in oversampled data", len(self.os_data_y[self.os_data_y['y'] == type1]))
+        print("Number of", type2, len(self.os_data_y[self.os_data_y['y'] == type2 ]))
+        print("Proportion of", type1, "data in oversampled data is ", len(self.os_data_y[self.os_data_y['y'] == type1 ]) / len(self.os_data_X))
+        print("Proportion of", type2, "data in oversampled data is ", len(self.os_data_y[self.os_data_y['y'] == type2 ]) / len(self.os_data_X))
 
     def model(self):
         self.logreg = LogisticRegression()
-        self.logreg.fit(self.x_train, self.y_train)
+        self.logreg.fit(self.os_data_X, self.os_data_y)
 
     def predict(self):
         self.y_pred = self.logreg.predict(self.x_test)
