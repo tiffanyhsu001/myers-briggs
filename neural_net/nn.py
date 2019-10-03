@@ -104,12 +104,14 @@ class neural_net:
             return 2 * ((precision * recall) / (precision + recall + K.epsilon()))
 
         self.model.compile(loss='binary_crossentropy',
-                      optimizer='adam',
+                      optimizer='rmsprop',
                       metrics=[f1, 'accuracy'])
 
-    def fit(self, batch_size, epochs):
-        self.os_data_y = self.os_data_y['y'].map(dict(E=1, I=0))
-        self.y_test = self.y_test.map(dict(E=1, I=0))
+
+    def fit(self, batch_size, epochs,type1):
+
+        self.os_data_y = self.os_data_y['y'].eq(type1).mul(1)
+        self.y_test = self.y_test.eq(type1).mul(1)
         self.model_history = self.model.fit(self.os_data_X, self.os_data_y, batch_size = batch_size,
                                             epochs = epochs,verbose=1, validation_data = (self.x_test, self.y_test))
 
