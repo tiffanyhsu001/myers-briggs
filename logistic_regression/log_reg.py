@@ -14,7 +14,7 @@ class log_reg:
     def train_test_split(self):
         self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(self.x, self.y, test_size=0.2, random_state=1)
         self.y_train.value_counts().plot(kind='bar', figsize=(8, 4), color='pink')
-        plt.title('Original Data Before Oversampling')
+        plt.title('Original Data')
 
     def oversample(self, type1, type2):
         os = SMOTE(random_state=0)
@@ -29,10 +29,13 @@ class log_reg:
         print("Number of", type2, len(self.os_data_y[self.os_data_y['y'] == type2 ]))
         print("Proportion of", type1, "data in oversampled data is ", len(self.os_data_y[self.os_data_y['y'] == type1 ]) / len(self.os_data_X))
         print("Proportion of", type2, "data in oversampled data is ", len(self.os_data_y[self.os_data_y['y'] == type2 ]) / len(self.os_data_X))
+        
+        self.x = self.os_data_X
+        self.y = self.os_data_y
 
     def model(self):
         self.logreg = LogisticRegression()
-        self.logreg.fit(self.os_data_X, self.os_data_y)
+        self.logreg.fit(self.x, self.y)
 
     def predict(self):
         self.y_pred = self.logreg.predict(self.x_test)
