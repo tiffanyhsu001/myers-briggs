@@ -44,6 +44,17 @@ In order to actually get some working variables for modelling, I created the fol
   
 
 ### Modeling 
-After breaking the categories into four separate binary classification problems, the next step was to create classification models for each personality subcategoriy. To begin, I started with a simple model: logisitic regression
+After breaking the categories into four separate binary classification problems, the next step was to create classification models for each personality subcategoriy. For validation, I broke the entire dataset in a training & testing set (70/30 split). To begin, I started with a simple model: logisitic regression. 
 
+#### Neural Net
+To capture nonlinear relationships, I also built a basic neural network model. To implement the model, I used the keras package and built a model with 2 hidden layers. I included 6 nodes in each hidden layer following the general rule of thumb:  <br />
+
+num of nodes = mean(input layer + output layer) <br />
+as I had 11 input layers (variables) and 1 output layer. Additionally, I added regularizers and a dropout in each hidden layer to reduce overfitting. In my output layer, I included a sigmoid activation function because my model is performing binary classification. When compiling the model, I chose to go with binary_crossentropy loss because again, the model is binary classification. I also went with rmsprop optimizer as it performed better than adam or sgd.
+
+### Evaluation, Metrics
+For both models, the metrics I focused on were accuracy and f1. I kept accuracy as a metric because it's easy to explain and interpret. On the other hand, because I know the data is imbalanced, I chose to also include f1 because it also accounts for penalties from imbalanced data.
+
+### Results
+Include tables
 
