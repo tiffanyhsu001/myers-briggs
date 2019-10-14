@@ -37,7 +37,7 @@ In order to actually get some working variables for modelling, I created the fol
   e. links per comment <br />
   f. number of nouns <br />
   g. number of verbs <br />
-2. Sentiment analysis
+2. Sentiment analysis <br />
   a. average AFINN score per comment <br />
   b. average textblob polarity per comment <br />
   c. average textblob subjectivity per comment <br />
