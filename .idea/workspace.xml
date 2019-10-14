@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="012c43cf-f74d-4d06-b57b-b2fd8e1030cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/exploratory_analysis-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/exploratory_analysis-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exploratory_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/exploratory_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logistic_regression/run_log_reg.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/logistic_regression/run_log_reg.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_net/nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_net/nn.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_net/nn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-130">
-              <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+            <state relative-caret-position="525">
+              <caret line="35" column="68" lean-forward="true" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -57,9 +61,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="105" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1440" />
     <option name="height" value="797" />
   </component>
   <component name="ProjectView">
@@ -132,17 +135,21 @@
       <workItem from="1569514801235" duration="643000" />
       <workItem from="1569856194642" duration="1764000" />
       <workItem from="1570144400600" duration="137000" />
-      <workItem from="1570679121648" duration="242000" />
+      <workItem from="1570679121648" duration="536000" />
+      <workItem from="1570722597578" duration="152000" />
+      <workItem from="1570749489409" duration="179000" />
+      <workItem from="1570981383888" duration="88000" />
+      <workItem from="1571084392898" duration="1054000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14839000" />
+    <option name="totallyTimeSpent" value="16606000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="23" width="1280" height="797" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2924071" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20100144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -156,7 +163,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21843971" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -182,8 +189,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neural_net/nn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+        <state relative-caret-position="525">
+          <caret line="35" column="68" lean-forward="true" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
