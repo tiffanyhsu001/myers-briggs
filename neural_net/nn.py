@@ -27,7 +27,7 @@ class neural_net:
 
     def oversample(self, type1, type2):
         """
-        This method uses SMOTE oversampling to account for imbalanced data
+        This method uses SMOTE oversampling to account for imbalanced data. Use if data is over 30/70 imbalance
         """
         os = SMOTE(random_state=0)
         columns = self.x_train.columns
