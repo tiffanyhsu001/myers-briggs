@@ -1,7 +1,7 @@
 # Myers-Briggs Personalities Classification
 
 ### Context:
-The Myers Briggs Type Indicator (or MBTI for short) is a personality type system that divides everyone into 16 distinct personality types across 4 axis:
+The Myers Briggs Type Indicator (or MBTI for short) is a personality type system that divides everyone into 16 distinct personality types across 4 axis: <br />
 
 Introversion (I) – Extroversion (E)
 Intuition (N) – Sensing (S)
@@ -21,7 +21,7 @@ Upon initial investigation, I realized that the data had zero numeric features &
   1. Introversion (I) – Extroversion (E)
   2. Intuition (N) – Sensing (S)
   3. Thinking (T) – Feeling (F)
-  4. Judging (J) – Perceiving (P)
+  4. Judging (J) – Perceiving (P) <br />
 After the split, I checked for class imbalances, and there were heavy imbalances in the I,E and N,S subcategories. 
 I also performed a chi-sq test for independence on the 6 different combinations of personality pairs (for example I_E and N_S, N_S and J_P, etc) and discovered that most of the subcategories are actually dependent on each other.
 
