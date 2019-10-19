@@ -1,3 +1,4 @@
+import numpy as np
 from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 import pandas as pd
@@ -5,6 +6,9 @@ import matplotlib.pyplot as plt
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, f1_score
+from sklearn import metrics, linear_model
+
+from sklearn.model_selection import cross_val_score
 
 class log_reg:
     def __init__(self, x,y):
@@ -30,16 +34,24 @@ class log_reg:
         print("Proportion of", type1, "data in oversampled data is ", len(self.os_data_y[self.os_data_y['y'] == type1 ]) / len(self.os_data_X))
         print("Proportion of", type2, "data in oversampled data is ", len(self.os_data_y[self.os_data_y['y'] == type2 ]) / len(self.os_data_X))
         
-        self.x = self.os_data_X
-        self.y = self.os_data_y
+        self.x_train = self.os_data_X
+        self.y_train = self.os_data_y
 
     def model(self):
-        self.logreg = LogisticRegression()
-        self.logreg.fit(self.x, self.y)
+        self.logreg = linear_model.LogisticRegression()
+        self.logreg.fit(self.x_train, self.y_train)
 
     def predict(self):
         self.y_pred = self.logreg.predict(self.x_test)
+        self.cv_scores = np.mean(cross_val_score(self.logreg, self.x_train, self.y_train, cv=10))
 
     def scores(self):
-        print('Accuracy of logistic regression classifier on test set: {:.2f}'.format(self.logreg.score(self.x_test, self.y_test)))
+        f1 = metrics.f1_score(self.y_test, self.y_pred, 
+                              pos_label=list(set(self.y_test)), average = 'weighted')
+       
+        print ("Accuracy using Logistic Regression with 10 fold cross validation : {:.2f}".format(self.cv_scores))
+        print("Scores from hold out test set:")
         print(classification_report(self.y_test, self.y_pred))
+        
+        
+        
