@@ -62,34 +62,22 @@ For all models, the metrics I focused on were accuracy and f1. I kept accuracy a
 ### Results
 
 #### Logistic Regression
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-Scoring     & E vs I & I vs S & F vs T & J vs P & Total \\ \hline
-Accuracy    & 0.76   & 0.53   & 0.66   & 0.61   & 0.162 \\ \hline
-Weighted F1 & 0.66   & 0.60   & 0.66   & 0.46   & 0.120 \\ \hline
-\end{tabular}
-\end{table}
+| Scoring     | E vs I | I vs S | F vs T | J vs P | Total |
+|-------------|--------|--------|--------|--------|-------|
+| Accuracy    | 0.76   | 0.53   | 0.66   | 0.61   | 0.162 |
+| Weighted F1 | 0.66   | 0.60   | 0.66   | 0.46   | 0.120 |
 
 #### Neural Network
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-Scoring     & E vs I & I vs S & F vs T & J vs P & Total \\ \hline
-Accuracy    & 0.63   & 0.61   & 0.66   & 0.52   & 0.132 \\ \hline
-Weighted F1 & 0.65   & 0.67   & 0.67   & 0.52   & 0.152 \\ \hline
-\end{tabular}
-\end{table}
+| Scoring     | E vs I | I vs S | F vs T | J vs P | Total |
+|-------------|--------|--------|--------|--------|-------|
+| Accuracy    | 0.63   | 0.61   | 0.66   | 0.52   | 0.132 |
+| Weighted F1 | 0.65   | 0.67   | 0.67   | 0.52   | 0.152 |
 
 #### Random Forest 
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-Scoring     & E vs I & I vs S & F vs T & J vs P & Total \\ \hline
-Accuracy    & 0.75   & 0.84   & 0.64   & 0.52   & 0.209 \\ \hline
-Weighted F1 & 0.67   & 0.80   & 0.64   & 0.52   & 0.178 \\ \hline
-\end{tabular}
-\end{table}
+| Scoring     | E vs I | I vs S | F vs T | J vs P | Total |
+|-------------|--------|--------|--------|--------|-------|
+| Accuracy    | 0.75   | 0.84   | 0.64   | 0.52   | 0.209 |
+| Weighted F1 | 0.67   | 0.80   | 0.64   | 0.52   | 0.178 |
 
 ### Conclusion 
 After evaluating each of the models, the random forest classification model performed best, with the highest overall 'total' scoring accuracy of 0.209. Similarly, the random forest model was had the most balanced performance with an f1 of 0.178. Logistic regression followed in second in accuracy, but was much lower than the neural network model in f1. Overall, for these specific dataset, I would recommend using the random forest classifier because of its robustness against outliers and preferred nature to imbalanced datasets.
