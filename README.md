@@ -57,7 +57,7 @@ as I had 11 input layers (variables) and 1 output layer. Additionally, I added r
 For my random forest modeling, I used the sklearn's random forest classifier. To tune the hyperparameters, I utilized grid search cross validation with CV = 5 and f1 scoring due to the nature of the imbalanced data. All scoring was ultimately determined by the initial hold-out test set. 
 
 ### Evaluation, Metrics
-For all models, the metrics I focused on were accuracy and f1. I kept accuracy as a metric because of its straightforward interpretability. On the other hand, since the data is imbalanced, I chose to also include f1 because it also accounts for penalties from imbalanced data.
+For all models, the metrics I focused on were accuracy and f1. I kept accuracy as a metric because of its straightforward interpretability. On the other hand, I included a second metric, f1, because it accounts for penalties from imbalanced data.
 
 ### Results
 
@@ -66,19 +66,22 @@ For all models, the metrics I focused on were accuracy and f1. I kept accuracy a
 |-------------|--------|--------|--------|--------|-------|
 | Accuracy    | 0.76   | 0.53   | 0.66   | 0.61   | 0.162 |
 | Weighted F1 | 0.66   | 0.60   | 0.66   | 0.46   | 0.120 |
+<br />
 
 #### Neural Network
 | Scoring     | E vs I | I vs S | F vs T | J vs P | Total |
 |-------------|--------|--------|--------|--------|-------|
 | Accuracy    | 0.63   | 0.61   | 0.66   | 0.52   | 0.132 |
 | Weighted F1 | 0.65   | 0.67   | 0.67   | 0.52   | 0.152 |
+<br />
 
 #### Random Forest 
 | Scoring     | E vs I | I vs S | F vs T | J vs P | Total |
 |-------------|--------|--------|--------|--------|-------|
 | Accuracy    | 0.75   | 0.84   | 0.64   | 0.52   | 0.209 |
 | Weighted F1 | 0.67   | 0.80   | 0.64   | 0.52   | 0.178 |
+<br />
 
 ### Conclusion 
-After evaluating each of the models, the random forest classification model performed best, with the highest overall 'total' scoring accuracy of 0.209. Similarly, the random forest model was had the most balanced performance with an f1 of 0.178. Logistic regression followed in second in accuracy, but was much lower than the neural network model in f1. Overall, for these specific dataset, I would recommend using the random forest classifier because of its robustness against outliers and preferred nature to imbalanced datasets.
+After evaluating each of the models, the random forest classification model performed best, with the highest overall 'total' scoring accuracy of 0.209. Similarly, the random forest model also had the most balanced performance with an f1 of 0.178. Logistic regression followed in second in accuracy, but was much lower than the neural network model in f1. Overall, for these specific dataset, I would recommend using the random forest classifier because of its robustness against outliers and preferred nature to combat imbalanced datasets.
 
